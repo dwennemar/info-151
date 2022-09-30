@@ -1,0 +1,91 @@
+#greeting {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-container > img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-container > span {
+    position: absolute;
+    color: #fff;
+    background: linear-gradient(0deg, #00000088 30%,#ffffff44 100%);
+    bottom: 0;
+    left: 0;
+}
+
+#greeting #claim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(0deg, #00000088 30%,#ffffff44 100%);
+}
+
+#products {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#products > .img-container {
+    height: 100vh;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#team {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+#team > .img-container {
+    height: 100vh;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.info-card > a {
+    text-decoration: none;
+    font-style: italic;
+    color: #222;
+}
+
+.info-card > a:hover {
+    text-decoration: underline;
+}
