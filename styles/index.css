@@ -44,6 +44,12 @@
     background: linear-gradient(0deg, #00000088 30%,#ffffff44 100%);
 }
 
+#claim > img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 15vh;
+}
+
 #products {
     display: flex;
     flex-direction: row;

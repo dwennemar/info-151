@@ -20,11 +20,17 @@ header {
     align-items: center;
 }
 
+header > img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1.15rem;
+    margin: 0 .5rem;
+}
+
 header > h1 {
     font-size: 1rem;
     margin: 0;
 }
-
 
 footer {
     height: 5rem;
