@@ -11,7 +11,8 @@ main > h1 {
 }
 
 #about-video > video {
-    width: 65%;
+    max-width: 65%;
+    max-height: 58vh;
 }
 
 #contact {
