@@ -1,0 +1,54 @@
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60%;
+    width: 30vw;
+}
+
+.input-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.input-field > input{
+    width: 75%;
+    height: 1.25rem;
+    border-color: grey;
+    border-radius: .25em;
+}
+
+.input-field > textarea {
+    width: 75%;
+    max-width: 75%;
+    min-width: 60%;
+    height: 4.25rem;
+    min-height: 2rem;
+    max-height: 8rem;
+    border-color: grey;
+    border-radius: .25em;
+}
+
+#contact-submit {
+    text-decoration: none;
+    background-color: dodgerblue;
+    padding: .5em;
+    border-radius: .25em;
+    color: #fff;
+    margin: 1em 0;
+    border: none;
+    width: 75%;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
