@@ -95,3 +95,7 @@
 .info-card > a:hover {
     text-decoration: underline;
 }
+
+nav {
+    background-color: #505050; !important;
+}
