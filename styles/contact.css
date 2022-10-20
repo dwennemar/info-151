@@ -40,6 +40,13 @@ main {
     border-radius: .25em;
 }
 
+.error-msg {
+    font-size: small;
+    color: red;
+    text-align: right;
+    width: 90%;
+}
+
 #contact-submit {
     text-decoration: none;
     background-color: dodgerblue;

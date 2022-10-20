@@ -8,6 +8,47 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+		<script type="text/javascript">
+			function validateName() {
+				document.getElementById("name-error").innerText = "";
+				const nameVal = document.contactForm.name.value;
+				const nameParts = nameVal.split(' ');
+				if (nameParts.length === 2 || nameParts.length === 3) {
+					return true;
+				}
+				document.getElementById("name-error").innerText = "Name is not valid"
+				return false;
+			}
+
+			function validateEmail() {
+				document.getElementById("email-error").innerText = "";
+				const emailVal = document.contactForm.email.value;
+				const emailParts = emailVal.split("@");
+				if (emailParts.length !== 2) {
+					document.getElementById("email-error").innerText = "E-Mail is not in valid format";
+					return false;
+				}
+				const domainParts = emailParts[1].split('.');
+				if(domainParts.length !== 2) {
+					document.getElementById("email-error").innerText = "E-Mail is not in valid format";
+					return false;
+				}
+				return true;
+			}
+
+			function sendData(event) {
+				event.preventDefault();
+				const nameValue = document.contactForm.name.value;
+				const emailValue = document.contactForm.email.value;
+				const textValue = document.contactForm.message.value;
+
+				if (!validateName() || !validateEmail()) {
+					return false;
+				}
+				const url = `mailto:${emailValue}?subject=Message from${nameValue}&body=${textValue}`;
+				window.location.href = url;
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -22,14 +63,16 @@
 		</nav>
 		<main>
 			<h1>Contact us</h1>
-			<form id="contact-form">
+			<form id="contact-form" name="contactForm">
+				<span id="name-error" class="error-msg"></span>
 				<div class="input-field">
 					<label for="name">Name</label>
-					<input type="text" id="name" name="name" placeholder="John Doe">
+					<input type="text" id="name" name="name" placeholder="John Doe" onfocusout="validateName();">
 				</div>
+				<span id="email-error" class="error-msg"></span>
 				<div class="input-field">
 					<label for="email">E-Mail</label>
-					<input type="email" id="email" name="email" placeholder="john@doe.com">
+					<input type="email" id="email" name="email" placeholder="john@doe.com" onfocusout="validateEmail();">
 				</div>
 				<div class="input-field">
 					<label for="message">Message</label>
@@ -57,5 +100,8 @@
 					 src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
 					 alt="Valid CSS!" />
 		</a>
+	<script type="text/javascript">
+		document.contactForm.addEventListener("submit", sendData, true);
+	</script>
 	</body>
 </html>
