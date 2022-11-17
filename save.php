@@ -9,8 +9,6 @@
 
     $file = fopen("data/survey.txt", "a");
     $result = fwrite($file, "{$result}\n");
-
-    echo "Data saved successfully";
     fclose($file);
 ?>
 <!DOCTYPE html>
