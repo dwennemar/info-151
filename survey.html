@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Survey</title>
+	<script src="js/survey.js"></script>
+</head>
+<body>
+<span id="error-msg"></span>
+<form name="survey" action="save.php" method="post">
+	<label for="program">Program of Study: </label>
+	<input id="program" name="program"><br>
+	<label for="plength">Program Length: </label>
+	<select id="plength" name="plength">
+		<option value="4">Four Years</option>
+		<option value="5">Five Years</option>
+	</select><br>
+	Favorite Subjects: <br>
+	<label>
+		<input type="checkbox" name="fav1" id="fav1" value="Statistics">
+		Statistics
+	</label> <br>
+	<label>
+		<input type="checkbox" name="fav2" id="fav2" value="Programming">
+		Programming
+	</label> <br>
+	<label>
+		<input type="checkbox" name="fav3" id="fav3" value="Web Design">
+		Web Design
+	</label><br>
+	<button onclick="validateSurvey();" type="button">Validate and Submit</button>
+</form>
+</body>
+</html>
