@@ -13,9 +13,11 @@ td {
 }
 
 .redpiece {
-    background-image: url("images/redpiece.png");
+    background-image: url("../images/redpiece.png");
+    background-repeat: no-repeat;
 }
 
 .blackpiece {
-    background-image: url("images/blackpiece.png");
+    background-image: url("../images/blackpiece.png");
+    background-repeat: no-repeat;
 }
