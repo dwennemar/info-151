@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey</title>
+    <script src="js/survey.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/survey.css" media="all">
+</head>
+<body>
+<span id="error-msg"></span>
+<form name="survey" action="save.php" method="post">
+    <div id="program-name" class="form-section">
+        <label for="program">Program of Study: </label>
+        <input id="program" name="program">
+    </div>
+    <div id="program-length" class="form-section">
+        <label for="plength">Program Length: </label>
+        <select id="plength" name="plength">
+            <option value="4">Four Years</option>
+            <option value="5">Five Years</option>
+        </select>
+    </div>
+    <div id="favourites" class="form-section">
+        <p>Favorite Subjects:</p>
+        <div class="selection">
+            <input type="checkbox" name="fav1" id="fav1" value="Statistics">
+            <label for="fav1">Statistics</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="fav2" id="fav2" value="Programming">
+            <label for="fav2">Programming</label>
+        </div>
+        <div class="selection">
+            <input type="checkbox" name="fav3" id="fav3" value="Web Design">
+            <label for="fav3">Web Design</label>
+        </div>
+    </div>
+    <button onclick="validateSurvey();" type="button">Validate and Submit</button>
+</form>
+<div class="honesty-statement">
+    <span>I certify that: </span>
+    <ul>
+        <li>My work will be entirely my own work.</li>
+        <li>I will not quote the words of any other person from a printed source or a website without indicating what
+            has been quoted and providing an appropriate citation.
+        </li>
+        <li>I will not submit my work in this course to satisfy the requirements of any other course.</li>
+    </ul>
+    <p>Full Name: <em>Daniel Wennemar</em></p>
+    <p>Date: 11/17/2022</p>
+</div>
+<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.cs.drexel.edu%2F%7Edw967%2Fsurvey.html">W3C Validator
+    checked!</a>
+<a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fwww.cs.drexel.edu%2F%7Edw967%2Fsurvey.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+    <img style="border:0;width:88px;height:31px"
+         src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+         alt="Valid CSS!">
+</a>
+</body>
+</html>

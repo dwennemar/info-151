@@ -1,0 +1,14 @@
+h1 {
+    font-family: sans-serif;
+    width: 100%;
+    text-align: center;
+    margin: 0 2rem;
+}
+
+.pass {
+    color: #080;
+}
+
+.fail {
+    color: #800;
+}
