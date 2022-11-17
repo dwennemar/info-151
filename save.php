@@ -21,11 +21,11 @@
     <link rel="stylesheet" type="text/css" href="./styles/save.css" media="all">
 </head>
 <body>
-<span id="message">
+<h1 id="message" class="<?php echo $result ? 'pass' : 'fail' ?>">
     <?php
         echo $result ? "Data saved successfully" : "Error while saving your data"
     ?>
-</span>
+</h1>
 <div class="honesty-statement">
     <span>I certify that: </span>
     <ul>

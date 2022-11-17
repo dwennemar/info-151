@@ -12,10 +12,10 @@
 <table>
     <caption>Survey Results</caption>
     <thead>
-        <tr>
-            <th>Program</th>
-            <th>Duration</th>
-            <th>Favourites</th>
+        <tr class="row">
+            <th class="column">Program</th>
+            <th class="column">Duration</th>
+            <th class="column">Favourites</th>
         </tr>
     </thead>
     <tbody>
@@ -24,10 +24,10 @@
             while (($line = fgets($file, 4096)) !== false) {
                 list($program, $plength, $favs) = explode(",", $line);
     ?>
-        <tr>
-            <td><?php echo $program ?></td>
-            <td><?php echo $plength ?></td>
-            <td><?php echo $favs ?></td>
+        <tr class="row">
+            <td class="column"><?php echo $program ?></td>
+            <td class="center column"><?php echo $plength ?></td>
+            <td class="column"><?php echo $favs ?></td>
         </tr>
     <?php
             }

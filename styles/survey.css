@@ -1,0 +1,48 @@
+#error-msg {
+    color: red;
+    font-weight: bold;
+}
+
+form {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form > button {
+    text-decoration: none;
+    background-color: dodgerblue;
+    padding: .5em;
+    border-radius: .25em;
+    color: #fff;
+    margin: 1em 0;
+    border: none;
+    width: 100%;
+}
+
+.form-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .25rem 0;
+}
+
+#program-name > input {
+    width: 11rem;
+}
+
+#program-length > select{
+    width: 11rem;
+}
+
+#favourites {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+#favourites > p {
+    margin: .25rem 0;
+}
