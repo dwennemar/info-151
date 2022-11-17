@@ -62,7 +62,7 @@ function showGamePieces(rows, columns) {
 }
 
 function randomMove() {
-  document.getElementById("member1").innerText = "Daniel";
+  document.getElementById("member3").innerText = "Daniel";
 
   const r1 = Math.floor(Math.random() * 8);
   const c1 = Math.floor(Math.random() * 8);
