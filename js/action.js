@@ -26,6 +26,8 @@ function getCellID(colsPerRow, r, c) {
 }
 
 function drawGameBoard(rows, columns) {
+  document.getElementById("member1").innerText = "Daniel";
+
   const table = document.createElement("table");
   const board = document.getElementById("board");
   board.appendChild(table);
@@ -44,6 +46,8 @@ function drawGameBoard(rows, columns) {
 }
 
 function showGamePieces(rows, columns) {
+  document.getElementById("member2").innerText = "Daniel";
+
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns; j++) {
       const cellId = getCellID(8, i, j);
@@ -58,6 +62,8 @@ function showGamePieces(rows, columns) {
 }
 
 function randomMove() {
+  document.getElementById("member1").innerText = "Daniel";
+
   const r1 = Math.floor(Math.random() * 8);
   const c1 = Math.floor(Math.random() * 8);
   const r2 = Math.floor(Math.random() * 8);
