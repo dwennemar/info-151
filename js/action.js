@@ -35,7 +35,7 @@ function drawGameBoard(rows, columns) {
 function showGamePieces(rows, columns) {
   for (let i = 0; i < rows; i++) {
     for (let j = 0; j < columns; j++) {
-      const cellId = getCellID(8,i,j);
+      const cellId = getCellID(8, i, j);
       const cell = document.getElementById(cellId);
       if (pieces[i][j] < 0) {
         cell.setAttribute("class", "redpiece");
@@ -44,4 +44,29 @@ function showGamePieces(rows, columns) {
       }
     }
   }
+}
+
+function randomMove() {
+  const r1 = Math.floor(Math.random() * 8);
+  const c1 = Math.floor(Math.random() * 8);
+  const r2 = Math.floor(Math.random() * 8);
+  const c2 = Math.floor(Math.random() * 8);
+
+  const rc1 = pieces[r1][c1];
+  pieces[r2][c2] = rc1;
+
+  const rc1CellId = getCellID(8, r1, c1);
+  const baseCell = document.getElementById(rc1CellId);
+  baseCell.setAttribute("class", "white");
+
+  const rc2CellId = getCellID(8, r2, c2);
+
+  const newCell = document.getElementById(rc2CellId);
+  if (pieces[r1][c1] < 0) {
+    newCell.setAttribute("class", "redpiece");
+  } else if (pieces[r1][c1] > 0) {
+    newCell.setAttribute("class", "blackpiece");
+  }
+
+  pieces[r1][c1] = 0
 }
